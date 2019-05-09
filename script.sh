@@ -7,7 +7,7 @@ echo '-------------------------------------------------------------------'
 echo '•	Convierta el formato de las fechas de DD/MM/YY a YYYY-MM-DD'
 echo '------------------------------------------------------------------'
 sed -r 's/([0-9]{2})\/([0-9]{2})\/([0-9]{2})/\1-\2-\3/g' data.csv > data1.csv
-sed -r 's/([0-9]{2})\-([0-9]{2})\-([0-9]{2})/\3-\2-\1/g' data1.csv > data2.csv
+sed -r 's/([0-9]{2})\-([0-9]{2})\-([0-9]{2})/20\3-\2-\1/g' data1.csv > data2.csv
 cat data2.csv
 echo '---------------------------------------------------------------------------'
 echo '•	Transforme el archivo para que todos los campos nulos aparezcan como \N'
